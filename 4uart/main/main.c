@@ -10,7 +10,7 @@ void app_main(void)
     esp_err_t ret;   
     
     uint8_t     len = 0;
-    uint16_t    time = 0;
+   
     unsigned char data[buf_rx_size]={0};
     gpio_init();
     uart_init();
@@ -25,26 +25,17 @@ void app_main(void)
     {
         uart_get_buffered_data_len(USART_UX, (size_t*)&len);
         if(len>0)
-        {
+        {   
+            strcpy((char*)data, "你好,UART接收数据:");
+            uart_write_bytes(USART_UX, (const char*)data, strlen((const char*)data));
             memset(data,0,buf_rx_size);
         
             uart_read_bytes(USART_UX, data, len, 100);
             uart_write_bytes(USART_UX, (const char*)data, strlen((const char*)data));
+           
         }
-        else
-        {
-            time++;
-            if(time % 5000 == 0)
-            {
-                
-                
-            }
-            if(time % 30 ==0)
-            {
-                LED_TOGGLE();
-            }
-            vTaskDelay(10);
-        }
+      
+        vTaskDelay(10);
 
     }
     
