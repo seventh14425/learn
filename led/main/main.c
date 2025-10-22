@@ -6,9 +6,7 @@
 void app_main(void)
 {
     gpio_init();
-    while (1)
-    {
-      esp_err_t ret;
+    esp_err_t ret;
     
     ret = nvs_flash_init();         /* 初始化NVS */
 
@@ -17,6 +15,9 @@ void app_main(void)
         ESP_ERROR_CHECK(nvs_flash_erase());
         ret = nvs_flash_init();
     }
+    while (1)
+    {
+   
     }
     
 }
