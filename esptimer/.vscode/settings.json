@@ -13,6 +13,7 @@
   "files.associations": {
     "gpio.h": "c",
     "task.h": "c",
-    "led.h": "c"
+    "led.h": "c",
+    "esp_timer.h": "c"
   }
 }
