@@ -1,7 +1,7 @@
 {
     "version":            "1",
     "project_name":       "XL995",
-    "project_version":    "5e0aaf8-dirty",
+    "project_version":    "a642b0e-dirty",
     "project_path":       "C:/Users/27590/OneDrive/Desktop/learn/xl995",
     "idf_path":           "E:/soft/Espressif/frameworks/esp-idf-v5.1.2",
     "build_dir":          "C:/Users/27590/OneDrive/Desktop/learn/xl995/build",
